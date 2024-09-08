@@ -13,6 +13,8 @@ let edu = document.querySelector("#education1");
 let setEdu = document.querySelector("#set-education");
 let exp = document.querySelector("#experience1");
 let setExp = document.querySelector("#set-experience");
+let desig = document.querySelector("#designation");
+let setDesig = document.querySelector("#set-desig");
 let btn = document.querySelector("#convert");
 btn.addEventListener("click", function () {
     setName.innerText = username.value;
@@ -22,6 +24,7 @@ btn.addEventListener("click", function () {
     setSkill.innerText = skill.value;
     setEdu.innerText = edu.value;
     setExp.innerText = exp.value;
+    setDesig.innerText = desig.value;
 });
 // Toggle Contact Section
 document
@@ -42,25 +45,6 @@ document
         console.error("Contact element not found.");
     }
 });
-// Toggle Skills Section
-document
-    .getElementById("toggleSkills")
-    ?.addEventListener("click", function () {
-    const skills = document.getElementById("skills");
-    if (skills && skills.style) {
-        if (skills.style.display === "none") {
-            skills.style.display = "block";
-            this.textContent = "Hide Skills";
-        }
-        else {
-            skills.style.display = "none";
-            this.textContent = "Show Skills";
-        }
-    }
-    else {
-        console.error("Skills element not found.");
-    }
-});
 // Toggle Education Section
 document
     .getElementById("toggleEducation")
@@ -78,6 +62,25 @@ document
     }
     else {
         console.error("Education element not found.");
+    }
+});
+// Toggle Skills Section
+document
+    .getElementById("toggleSkills")
+    ?.addEventListener("click", function () {
+    const skills = document.getElementById("skills");
+    if (skills && skills.style) {
+        if (skills.style.display === "none") {
+            skills.style.display = "block";
+            this.textContent = "Hide Skills";
+        }
+        else {
+            skills.style.display = "none";
+            this.textContent = "Show Skills";
+        }
+    }
+    else {
+        console.error("Skills element not found.");
     }
 });
 // Toggle Experience Section

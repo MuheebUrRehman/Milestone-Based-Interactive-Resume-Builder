@@ -6,12 +6,14 @@
     <title>Resume Builder</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
+
   <body>
-    <div class="container">
+    <div class="container-form">
       <h1>Dynamic Resume Builder</h1>
       <section>
-        <h2>Name</h2>
+        <h2>Name/Designation</h2>
         <input type="text" id="username" placeholder="Name" />
+        <input type="text" id="designation" placeholder="Designation" />
       </section>
 
       <section>
@@ -26,65 +28,64 @@
         <input type="text" id="education1" placeholder="add education" />
         <!-- <button id="add-education">Add Education</button> -->
       </section>
+
       <section id="skills-section">
         <h2>Skills</h2>
         <input type="text" id="skill1" placeholder="add skill" />
-
         <!-- <button id="add-skill">Add Skill</button> -->
       </section>
-      <section id="work-experience-section">
+
+      <section>
         <h2>Work Experience</h2>
         <input type="text" id="experience1" placeholder="add experience" />
         <!-- <button id="add-work-experience">Add Work Experience</button> -->
       </section>
 
-      <button id="convert" class="toggle">Submit</button>
+      <button id="convert" class="toggle">Generate Resume</button>
 
-      <div id="resume-output" class="resume-container">
-        <div>
-          <div class="container">
-            <header class="name-header">
-              <h1 id="set-name"></h1>
-            </header>
-            <section id="contact">
-              <h2>Contact Information</h2>
-              <ul>
-                <li id="set-email"></li>
-                <li id="set-phone"></li>
-                <li id="set-linkedin"></li>
-              </ul>
-            </section>
+      <div class="resume-container">
+        <header class="name-header">
+          <h1 id="set-name"></h1>
+          <h2 id="set-desig"></h2>
+        </header>
 
-            <button id="toggleContact" class="toggle">Hide Contact</button>
-            <section id="education">
-              <h2>Education</h2>
-              <ul>
-                <li id="set-education"></li>
-              </ul>
-            </section>
+        <section id="contact">
+          <h2>Contact Information</h2>
+          <ul>
+            <li id="set-email"></li>
+            <li id="set-phone"></li>
+            <li id="set-linkedin"></li>
+          </ul>
+        </section>
 
-            <button id="toggleEducation" class="toggle">Hide Education</button>
-            <section id="skills">
-              <h2>Skills</h2>
-              <ul>
-                <li id="set-skill1"></li>
-              </ul>
-            </section>
+        <button id="toggleContact" class="toggle">Hide Contact</button>
 
-            <button id="toggleSkills" class="toggle">Hide Skills</button>
+        <section id="education">
+          <h2>Education</h2>
+          <ul>
+            <li id="set-education"></li>
+          </ul>
+        </section>
 
-            <section id="experience">
-              <h2>Work Experience</h2>
-              <ul>
-                <li id="set-experience"></li>
-              </ul>
-            </section>
+        <button id="toggleEducation" class="toggle">Hide Education</button>
 
-            <button id="toggleExperience" class="toggle">
-              Hide Experience
-            </button>
-          </div>
-        </div>
+        <section id="skills">
+          <h2>Skills</h2>
+          <ul>
+            <li id="set-skill1"></li>
+          </ul>
+        </section>
+
+        <button id="toggleSkills" class="toggle">Hide Skills</button>
+
+        <section id="experience">
+          <h2>Work Experience</h2>
+          <ul>
+            <li id="set-experience"></li>
+          </ul>
+        </section>
+
+        <button id="toggleExperience" class="toggle">Hide Experience</button>
       </div>
 
       <script src="script.js"></script>

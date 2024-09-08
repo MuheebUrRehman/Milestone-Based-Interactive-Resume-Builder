@@ -12,6 +12,9 @@ let edu = document.querySelector("#education1") as HTMLInputElement;
 let setEdu = document.querySelector("#set-education") as HTMLElement;
 let exp = document.querySelector("#experience1") as HTMLInputElement;
 let setExp = document.querySelector("#set-experience") as HTMLElement;
+let desig = document.querySelector("#designation") as HTMLInputElement;
+let setDesig = document.querySelector("#set-desig") as HTMLElement;
+
 let btn = document.querySelector("#convert") as HTMLButtonElement;
 
 btn.addEventListener("click", function () {
@@ -22,6 +25,7 @@ btn.addEventListener("click", function () {
   setSkill.innerText = skill.value;
   setEdu.innerText = edu.value;
   setExp.innerText = exp.value;
+  setDesig.innerText = desig.value;
 });
 
 // Toggle Contact Section
@@ -43,25 +47,6 @@ document
     }
   });
 
-// Toggle Skills Section
-document
-  .getElementById("toggleSkills")
-  ?.addEventListener("click", function (this: HTMLButtonElement) {
-    const skills = document.getElementById("skills");
-
-    if (skills && skills.style) {
-      if (skills.style.display === "none") {
-        skills.style.display = "block";
-        this.textContent = "Hide Skills";
-      } else {
-        skills.style.display = "none";
-        this.textContent = "Show Skills";
-      }
-    } else {
-      console.error("Skills element not found.");
-    }
-  });
-
 // Toggle Education Section
 document
   .getElementById("toggleEducation")
@@ -78,6 +63,25 @@ document
       }
     } else {
       console.error("Education element not found.");
+    }
+  });
+
+// Toggle Skills Section
+document
+  .getElementById("toggleSkills")
+  ?.addEventListener("click", function (this: HTMLButtonElement) {
+    const skills = document.getElementById("skills");
+
+    if (skills && skills.style) {
+      if (skills.style.display === "none") {
+        skills.style.display = "block";
+        this.textContent = "Hide Skills";
+      } else {
+        skills.style.display = "none";
+        this.textContent = "Show Skills";
+      }
+    } else {
+      console.error("Skills element not found.");
     }
   });
 
