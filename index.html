@@ -11,6 +11,18 @@
     <div class="container-form">
       <h1>Dynamic Resume Builder</h1>
       <section>
+        <h2>Profile pic</h2>
+        <img src="images.png" id="profile-pic" />
+        <label for="input-file">update image</label>
+        <input
+          type="file"
+          accept="image/jpeg ,image/png , image/jpg"
+          id="input-file"
+          class="input-img"
+        />
+      </section>
+
+      <section>
         <h2>Name/Designation</h2>
         <input type="text" id="username" placeholder="Name" />
         <input type="text" id="designation" placeholder="Designation" />
@@ -50,6 +62,13 @@
           <h1 id="set-name"></h1>
           <h2 id="set-desig"></h2>
         </header>
+
+        <section id="resume-profile-pic">
+          <h2>Profile picture</h2>
+          <img id="displayed-profile-pic" class="pic" />
+        </section>
+
+        <button id="toggleImage" class="toggle">Hide Profile</button>
 
         <section id="contact">
           <h2>Contact Information</h2>

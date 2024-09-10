@@ -58,6 +58,10 @@ li {
   margin-bottom: 1rem;
 }
 
+.pic {
+  margin-top: 1rem;
+}
+
 .toggle {
   color: white;
   margin-top: 2%;
@@ -66,7 +70,30 @@ li {
   width: 7rem;
   background-color: #0073b1;
   border-radius: 1.3rem;
-  box-shadow:0 0 15px rgba(0, 0, 0, 0.8); ;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.8);
+}
+
+img {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+}
+
+label {
+  display: block;
+  color: white;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  height: 2.5rem;
+  width: 5rem;
+  background: #0073b1;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.input-img {
+  display: none;
 }
 
 @media (max-width: 600px) {

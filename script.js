@@ -16,6 +16,16 @@ let setExp = document.querySelector("#set-experience");
 let desig = document.querySelector("#designation");
 let setDesig = document.querySelector("#set-desig");
 let btn = document.querySelector("#convert");
+const profilePic = document.getElementById("profile-pic");
+const inputFile = document.getElementById("input-file");
+const displayedProfilePic = document.getElementById("displayed-profile-pic");
+let uploadedProfilePicUrl = null;
+inputFile.onchange = function () {
+    if (inputFile.files && inputFile.files.length > 0) {
+        uploadedProfilePicUrl = URL.createObjectURL(inputFile.files[0]);
+        profilePic.src = uploadedProfilePicUrl;
+    }
+};
 btn.addEventListener("click", function () {
     setName.innerText = username.value;
     setEmail.innerText = email.value;
@@ -25,6 +35,31 @@ btn.addEventListener("click", function () {
     setEdu.innerText = edu.value;
     setExp.innerText = exp.value;
     setDesig.innerText = desig.value;
+    if (uploadedProfilePicUrl) {
+        displayedProfilePic.src = uploadedProfilePicUrl;
+    }
+    else {
+        displayedProfilePic.src = "images.png";
+    }
+});
+// Toggle image Section
+document
+    .getElementById("toggleImage")
+    ?.addEventListener("click", function () {
+    const imageHide = document.getElementById("resume-profile-pic");
+    if (imageHide && imageHide.style) {
+        if (imageHide.style.display === "none") {
+            imageHide.style.display = "block";
+            this.textContent = "Hide Image";
+        }
+        else {
+            imageHide.style.display = "none";
+            this.textContent = "Show image";
+        }
+    }
+    else {
+        console.error("image element not found.");
+    }
 });
 // Toggle Contact Section
 document
