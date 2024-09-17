@@ -1,27 +1,29 @@
+// input elements
+let profilePic = document.querySelector("#profile-pic") as HTMLImageElement;
+let inputFile = document.querySelector("#input-file") as HTMLInputElement;
 let username = document.querySelector("#username") as HTMLInputElement;
-let setName = document.querySelector("#set-name") as HTMLElement;
-let email = document.querySelector("#email") as HTMLInputElement;
-let setEmail = document.querySelector("#set-email") as HTMLElement;
-let phone = document.querySelector("#phone") as HTMLInputElement;
-let setPhone = document.querySelector("#set-phone") as HTMLElement;
-let linkedin = document.querySelector("#linkedin") as HTMLInputElement;
-let setLinkedin = document.querySelector("#set-linkedin") as HTMLElement;
-let skill = document.querySelector("#skill1") as HTMLInputElement;
-let setSkill = document.querySelector("#set-skill1") as HTMLElement;
-let edu = document.querySelector("#education1") as HTMLInputElement;
-let setEdu = document.querySelector("#set-education") as HTMLElement;
-let exp = document.querySelector("#experience1") as HTMLInputElement;
-let setExp = document.querySelector("#set-experience") as HTMLElement;
 let desig = document.querySelector("#designation") as HTMLInputElement;
+let email = document.querySelector("#email") as HTMLInputElement;
+let phone = document.querySelector("#phone") as HTMLInputElement;
+let linkedin = document.querySelector("#linkedin") as HTMLInputElement;
+let edu = document.querySelector("#education1") as HTMLInputElement;
+let skill = document.querySelector("#skill1") as HTMLInputElement;
+let exp = document.querySelector("#experience1") as HTMLInputElement;
+
+// setting values
+let setName = document.querySelector("#set-name") as HTMLElement;
 let setDesig = document.querySelector("#set-desig") as HTMLElement;
+let setEmail = document.querySelector("#set-email") as HTMLElement;
+let setPhone = document.querySelector("#set-phone") as HTMLElement;
+let setLinkedin = document.querySelector("#set-linkedin") as HTMLElement;
+let setEdu = document.querySelector("#set-education") as HTMLElement;
+let setSkill = document.querySelector("#set-skill1") as HTMLElement;
+let setExp = document.querySelector("#set-experience") as HTMLElement;
+let displayedProfilePic = document.querySelector(
+  "#displayed-profile-pic"
+) as HTMLImageElement;
 
 let btn = document.querySelector("#convert") as HTMLButtonElement;
-
-const profilePic = document.getElementById("profile-pic") as HTMLImageElement;
-const inputFile = document.getElementById("input-file") as HTMLInputElement;
-const displayedProfilePic = document.getElementById(
-  "displayed-profile-pic"
-) as HTMLImageElement;
 
 let uploadedProfilePicUrl: string | null = null;
 
@@ -33,19 +35,27 @@ inputFile.onchange = function () {
 };
 
 btn.addEventListener("click", function () {
-  setName.innerText = username.value;
-  setEmail.innerText = email.value;
-  setPhone.innerText = phone.value;
-  setLinkedin.innerText = linkedin.value;
-  setSkill.innerText = skill.value;
-  setEdu.innerText = edu.value;
-  setExp.innerText = exp.value;
-  setDesig.innerText = desig.value;
   if (uploadedProfilePicUrl) {
     displayedProfilePic.src = uploadedProfilePicUrl;
   } else {
     displayedProfilePic.src = "images.png";
   }
+  setName.innerText = username.value;
+  setName.setAttribute("contenteditable", "true");
+  setDesig.innerText = desig.value;
+  setDesig.setAttribute("contenteditable", "true");
+  setEmail.innerText = email.value;
+  setEmail.setAttribute("contenteditable", "true");
+  setPhone.innerText = phone.value;
+  setPhone.setAttribute("contenteditable", "true");
+  setLinkedin.innerText = linkedin.value;
+  setLinkedin.setAttribute("contenteditable", "true");
+  setEdu.innerText = edu.value;
+  setEdu.setAttribute("contenteditable", "true");
+  setSkill.innerText = skill.value;
+  setSkill.setAttribute("contenteditable", "true");
+  setExp.innerText = exp.value;
+  setExp.setAttribute("contenteditable", "true");
 });
 
 // Toggle image Section

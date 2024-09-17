@@ -1,24 +1,26 @@
 "use strict";
+// input elements
+let profilePic = document.querySelector("#profile-pic");
+let inputFile = document.querySelector("#input-file");
 let username = document.querySelector("#username");
-let setName = document.querySelector("#set-name");
-let email = document.querySelector("#email");
-let setEmail = document.querySelector("#set-email");
-let phone = document.querySelector("#phone");
-let setPhone = document.querySelector("#set-phone");
-let linkedin = document.querySelector("#linkedin");
-let setLinkedin = document.querySelector("#set-linkedin");
-let skill = document.querySelector("#skill1");
-let setSkill = document.querySelector("#set-skill1");
-let edu = document.querySelector("#education1");
-let setEdu = document.querySelector("#set-education");
-let exp = document.querySelector("#experience1");
-let setExp = document.querySelector("#set-experience");
 let desig = document.querySelector("#designation");
+let email = document.querySelector("#email");
+let phone = document.querySelector("#phone");
+let linkedin = document.querySelector("#linkedin");
+let edu = document.querySelector("#education1");
+let skill = document.querySelector("#skill1");
+let exp = document.querySelector("#experience1");
+// setting values
+let setName = document.querySelector("#set-name");
 let setDesig = document.querySelector("#set-desig");
+let setEmail = document.querySelector("#set-email");
+let setPhone = document.querySelector("#set-phone");
+let setLinkedin = document.querySelector("#set-linkedin");
+let setEdu = document.querySelector("#set-education");
+let setSkill = document.querySelector("#set-skill1");
+let setExp = document.querySelector("#set-experience");
+let displayedProfilePic = document.querySelector("#displayed-profile-pic");
 let btn = document.querySelector("#convert");
-const profilePic = document.getElementById("profile-pic");
-const inputFile = document.getElementById("input-file");
-const displayedProfilePic = document.getElementById("displayed-profile-pic");
 let uploadedProfilePicUrl = null;
 inputFile.onchange = function () {
     if (inputFile.files && inputFile.files.length > 0) {
@@ -27,20 +29,28 @@ inputFile.onchange = function () {
     }
 };
 btn.addEventListener("click", function () {
-    setName.innerText = username.value;
-    setEmail.innerText = email.value;
-    setPhone.innerText = phone.value;
-    setLinkedin.innerText = linkedin.value;
-    setSkill.innerText = skill.value;
-    setEdu.innerText = edu.value;
-    setExp.innerText = exp.value;
-    setDesig.innerText = desig.value;
     if (uploadedProfilePicUrl) {
         displayedProfilePic.src = uploadedProfilePicUrl;
     }
     else {
         displayedProfilePic.src = "images.png";
     }
+    setName.innerText = username.value;
+    setName.setAttribute("contenteditable", "true");
+    setDesig.innerText = desig.value;
+    setDesig.setAttribute("contenteditable", "true");
+    setEmail.innerText = email.value;
+    setEmail.setAttribute("contenteditable", "true");
+    setPhone.innerText = phone.value;
+    setPhone.setAttribute("contenteditable", "true");
+    setLinkedin.innerText = linkedin.value;
+    setLinkedin.setAttribute("contenteditable", "true");
+    setEdu.innerText = edu.value;
+    setEdu.setAttribute("contenteditable", "true");
+    setSkill.innerText = skill.value;
+    setSkill.setAttribute("contenteditable", "true");
+    setExp.innerText = exp.value;
+    setExp.setAttribute("contenteditable", "true");
 });
 // Toggle image Section
 document
