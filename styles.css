@@ -4,9 +4,14 @@
   box-sizing: border-box;
 }
 
-.container-form {
-  max-width: 800px;
-  margin: auto;
+body {
+  display: flex;
+  justify-content: space-around;
+}
+
+.container-form,
+.resume-container {
+  width: 650px;
   padding: 2rem;
   background: #fff;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
@@ -108,7 +113,8 @@ label {
 }
 
 @media (max-width: 600px) {
-  .container-form {
+  .container-form,
+  .resume-container {
     max-width: 300px;
     padding: 1rem;
   }

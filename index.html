@@ -24,8 +24,13 @@
 
       <section>
         <h2>Name/Designation</h2>
-        <input type="text" id="username" placeholder="Name" />
-        <input type="text" id="designation" placeholder="Designation" />
+        <input type="text" id="username" placeholder="Name" required />
+        <input
+          type="text"
+          id="designation"
+          placeholder="Designation"
+          required
+        />
       </section>
 
       <section>
@@ -56,60 +61,60 @@
       <button id="convert" class="toggle">Generate Resume</button>
 
       <hr class="line" />
-
-      <div class="resume-container">
-        <header class="name-header">
-          <h1 id="set-name"></h1>
-          <h2 id="set-desig"></h2>
-        </header>
-
-        <section id="resume-profile-pic">
-          <h2>Profile picture</h2>
-          <img id="displayed-profile-pic" class="pic" />
-        </section>
-
-        <button id="toggleImage" class="toggle">Hide Profile</button>
-
-        <section id="contact">
-          <h2>Contact Information</h2>
-          <ul>
-            <li id="set-email"></li>
-            <li id="set-phone"></li>
-            <li id="set-linkedin"></li>
-          </ul>
-        </section>
-
-        <button id="toggleContact" class="toggle">Hide Contact</button>
-
-        <section id="education">
-          <h2>Education</h2>
-          <ul>
-            <li id="set-education"></li>
-          </ul>
-        </section>
-
-        <button id="toggleEducation" class="toggle">Hide Education</button>
-
-        <section id="skills">
-          <h2>Skills</h2>
-          <ul>
-            <li id="set-skill1"></li>
-          </ul>
-        </section>
-
-        <button id="toggleSkills" class="toggle">Hide Skills</button>
-
-        <section id="experience">
-          <h2>Work Experience</h2>
-          <ul>
-            <li id="set-experience"></li>
-          </ul>
-        </section>
-
-        <button id="toggleExperience" class="toggle">Hide Experience</button>
-      </div>
-
-      <script src="script.js"></script>
     </div>
+
+    <div class="resume-container">
+      <header class="name-header">
+        <h1 id="set-name"></h1>
+        <h2 id="set-desig"></h2>
+      </header>
+
+      <section id="resume-profile-pic">
+        <h2>Profile picture</h2>
+        <img id="displayed-profile-pic" class="pic" />
+      </section>
+
+      <!-- <button id="toggleImage" class="toggle">Hide Profile</button> -->
+
+      <section id="contact">
+        <h2>Contact Information</h2>
+        <ul>
+          <li id="set-email"></li>
+          <li id="set-phone"></li>
+          <li id="set-linkedin"></li>
+        </ul>
+      </section>
+
+      <!-- <button id="toggleContact" class="toggle">Hide Contact</button> -->
+
+      <section id="education">
+        <h2>Education</h2>
+        <ul>
+          <li id="set-education"></li>
+        </ul>
+      </section>
+      <!-- 
+        <button id="toggleEducation" class="toggle">Hide Education</button> -->
+
+      <section id="skills">
+        <h2>Skills</h2>
+        <ul>
+          <li id="set-skill1"></li>
+        </ul>
+      </section>
+
+      <!-- <button id="toggleSkills" class="toggle">Hide Skills</button> -->
+
+      <section id="experience">
+        <h2>Work Experience</h2>
+        <ul>
+          <li id="set-experience"></li>
+        </ul>
+      </section>
+
+      <!-- <button id="toggleExperience" class="toggle">Hide Experience</button> -->
+    </div>
+
+    <script src="script.js"></script>
   </body>
 </html>
