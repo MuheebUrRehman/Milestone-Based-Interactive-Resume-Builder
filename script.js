@@ -1,27 +1,27 @@
-"use strict";
+var _a, _b, _c, _d, _e;
 // input elements
-let profilePic = document.querySelector("#profile-pic");
-let inputFile = document.querySelector("#input-file");
-let username = document.querySelector("#username");
-let desig = document.querySelector("#designation");
-let email = document.querySelector("#email");
-let phone = document.querySelector("#phone");
-let linkedin = document.querySelector("#linkedin");
-let edu = document.querySelector("#education1");
-let skill = document.querySelector("#skill1");
-let exp = document.querySelector("#experience1");
+var profilePic = document.querySelector("#profile-pic");
+var inputFile = document.querySelector("#input-file");
+var username = document.querySelector("#username");
+var desig = document.querySelector("#designation");
+var email = document.querySelector("#email");
+var phone = document.querySelector("#phone");
+var linkedin = document.querySelector("#linkedin");
+var edu = document.querySelector("#education1");
+var skill = document.querySelector("#skill1");
+var exp = document.querySelector("#experience1");
 // setting values
-let setName = document.querySelector("#set-name");
-let setDesig = document.querySelector("#set-desig");
-let setEmail = document.querySelector("#set-email");
-let setPhone = document.querySelector("#set-phone");
-let setLinkedin = document.querySelector("#set-linkedin");
-let setEdu = document.querySelector("#set-education");
-let setSkill = document.querySelector("#set-skill1");
-let setExp = document.querySelector("#set-experience");
-let displayedProfilePic = document.querySelector("#displayed-profile-pic");
-let btn = document.querySelector("#convert");
-let uploadedProfilePicUrl = null;
+var setName = document.querySelector("#set-name");
+var setDesig = document.querySelector("#set-desig");
+var setEmail = document.querySelector("#set-email");
+var setPhone = document.querySelector("#set-phone");
+var setLinkedin = document.querySelector("#set-linkedin");
+var setEdu = document.querySelector("#set-education");
+var setSkill = document.querySelector("#set-skill1");
+var setExp = document.querySelector("#set-experience");
+var displayedProfilePic = document.querySelector("#displayed-profile-pic");
+var btn = document.querySelector("#convert");
+var uploadedProfilePicUrl = null;
 inputFile.onchange = function () {
     if (inputFile.files && inputFile.files.length > 0) {
         uploadedProfilePicUrl = URL.createObjectURL(inputFile.files[0]);
@@ -53,10 +53,9 @@ btn.addEventListener("click", function () {
     setExp.setAttribute("contenteditable", "true");
 });
 // Toggle image Section
-document
-    .getElementById("toggleImage")
-    ?.addEventListener("click", function () {
-    const imageHide = document.getElementById("resume-profile-pic");
+(_a = document
+    .getElementById("toggleImage")) === null || _a === void 0 ? void 0 : _a.addEventListener("click", function () {
+    var imageHide = document.getElementById("resume-profile-pic");
     if (imageHide && imageHide.style) {
         if (imageHide.style.display === "none") {
             imageHide.style.display = "block";
@@ -72,10 +71,9 @@ document
     }
 });
 // Toggle Contact Section
-document
-    .getElementById("toggleContact")
-    ?.addEventListener("click", function () {
-    const contact = document.getElementById("contact");
+(_b = document
+    .getElementById("toggleContact")) === null || _b === void 0 ? void 0 : _b.addEventListener("click", function () {
+    var contact = document.getElementById("contact");
     if (contact && contact.style) {
         if (contact.style.display === "none") {
             contact.style.display = "block";
@@ -91,10 +89,9 @@ document
     }
 });
 // Toggle Education Section
-document
-    .getElementById("toggleEducation")
-    ?.addEventListener("click", function () {
-    const education = document.getElementById("education");
+(_c = document
+    .getElementById("toggleEducation")) === null || _c === void 0 ? void 0 : _c.addEventListener("click", function () {
+    var education = document.getElementById("education");
     if (education && education.style) {
         if (education.style.display === "none") {
             education.style.display = "block";
@@ -110,10 +107,9 @@ document
     }
 });
 // Toggle Skills Section
-document
-    .getElementById("toggleSkills")
-    ?.addEventListener("click", function () {
-    const skills = document.getElementById("skills");
+(_d = document
+    .getElementById("toggleSkills")) === null || _d === void 0 ? void 0 : _d.addEventListener("click", function () {
+    var skills = document.getElementById("skills");
     if (skills && skills.style) {
         if (skills.style.display === "none") {
             skills.style.display = "block";
@@ -129,10 +125,9 @@ document
     }
 });
 // Toggle Experience Section
-document
-    .getElementById("toggleExperience")
-    ?.addEventListener("click", function () {
-    const experience = document.getElementById("experience");
+(_e = document
+    .getElementById("toggleExperience")) === null || _e === void 0 ? void 0 : _e.addEventListener("click", function () {
+    var experience = document.getElementById("experience");
     if (experience && experience.style) {
         if (experience.style.display === "none") {
             experience.style.display = "block";
