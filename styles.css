@@ -4,9 +4,16 @@
   box-sizing: border-box;
 }
 
-body {
+.resume-cont {
   display: flex;
   justify-content: space-around;
+}
+
+@media (max-width: 768px) {
+  .resume-cont {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .container-form,
